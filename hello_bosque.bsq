@@ -1,0 +1,12 @@
+// Hello, World! in Bosque
+namespace NSMain;
+
+concept Hello {
+    virtual function sayHello(): String = "Hello, World!";
+}
+
+entity HelloWorld provides Hello {}
+
+entrypoint function main(): String {
+    return HelloWorld{}.sayHello();
+}
